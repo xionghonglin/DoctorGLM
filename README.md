@@ -9,7 +9,7 @@ https://github.com/Toyhom/Chinese-medical-dialogue-data
 - pip install deep_training cpm_kernels icetk transformers>=4.26.1 
 - torch >= 1.12.0 (icetk依赖cpu版torch, 建议先安装icetk后安装gpu版torch)
 ## 使用
-./Doctor_GLM/chat.ipynb
+Doctor_GLM/chat.ipynb
 
 # TODO
 - 降低显存使用
