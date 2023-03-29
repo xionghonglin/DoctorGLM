@@ -12,5 +12,5 @@ https://github.com/Toyhom/Chinese-medical-dialogue-data
 ./Doctor_GLM/chat.ipynb
 
 # TODO
-- 模型量化, 降低显存使用
+- 降低显存使用
 - 扩大训练数据集
