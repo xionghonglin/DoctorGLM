@@ -11,11 +11,6 @@ https://github.com/Toyhom/Chinese-medical-dialogue-data
 ## 使用
 ./Doctor_GLM/chat.ipynb
 
-## Reference
-https://github.com/THUDM/ChatGLM-6B
-
-https://github.com/ssbuild/chatglm_finetuning
-
 # TODO
 - 模型量化, 降低显存使用
 - 扩大训练数据集
