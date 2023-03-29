@@ -10,6 +10,7 @@ https://github.com/Toyhom/Chinese-medical-dialogue-data
 - torch >= 1.12.0 (icetk依赖cpu版torch, 建议先安装icetk后安装gpu版torch)
 ## 使用
 Doctor_GLM/chat.ipynb
+
 第一次运行会下载chatGLM-6B权重
 ## 对话示例
 
