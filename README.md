@@ -1,5 +1,5 @@
 # DoctorGLM
-中文在线问诊模型， 基于 ChatGLM-6B + lora 进行finetune.
+中文在线问诊模型， 基于 ChatGLM-6B + lora 进行finetune
 
 finetune代码来自 https://github.com/ssbuild/chatglm_finetuning
 ## 训练数据
