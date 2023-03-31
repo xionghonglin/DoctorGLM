@@ -1,3 +1,10 @@
+<p align="center">
+  <img src="imgs/logo.png" width=700px/>
+  <br/>
+  <img src="https://img.shields.io/badge/Version-0.0.1--alpha-brightgreen">
+</p>
+
+
 # DoctorGLM
 中文问诊模型， 基于 ChatGLM-6B + lora 进行finetune
 
