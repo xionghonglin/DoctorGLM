@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="imgs/logo.png" width=700px/>
+  <img src="imgs/logo.png" width=400px/>
   <br/>
   <img src="https://img.shields.io/badge/Version-0.0.1--alpha-brightgreen">
 </p>
