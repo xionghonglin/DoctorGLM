@@ -1,0 +1,33 @@
+{
+  "architectures": [
+    "ChatGLMModel"
+  ],
+  "auto_map": {
+    "AutoConfig": "configuration_chatglm.ChatGLMConfig",
+    "AutoModel": "modeling_chatglm.ChatGLMForConditionalGeneration",
+    "AutoModelForSeq2SeqLM": "modeling_chatglm.ChatGLMForConditionalGeneration"
+  },
+  "bos_token_id": 150004,
+  "eos_token_id": 20002,
+  "hidden_size": 4096,
+  "initializer_range": 0.02,
+  "initializer_weight": false,
+  "inner_hidden_size": 16384,
+  "layernorm_epsilon": 1e-05,
+  "max_sequence_length": 2048,
+  "model_type": "chatglm",
+  "num_attention_heads": 32,
+  "num_layers": 28,
+  "pad_token_id": 20003,
+  "position_encoding_2d": true,
+  "precision": 16,
+  "return_dict": false,
+  "task_specific_params": {
+    "learning_rate": 2e-05,
+    "learning_rate_for_task": 2e-05
+  },
+  "torch_dtype": "float16",
+  "transformers_version": "4.27.3",
+  "use_cache": true,
+  "vocab_size": 150528
+}
