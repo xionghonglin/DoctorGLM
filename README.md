@@ -23,4 +23,4 @@ Doctor_GLM/chat.ipynb
 
 # TODO
 - 降低显存使用
-- 扩大训练数据集
+- 多轮对话
