@@ -21,6 +21,10 @@ https://github.com/Toyhom/Chinese-medical-dialogue-data
 
 第一次运行会下载chatGLM-6B权重
 ## 结果示例
+<p align="center">
+  <img src="imgs/ret.png" width=800px/>
+  <br/>
+</p>
 结果在 ./results目录下，两份json文件分别为由ChatGLM, DoctorGLM得到的结果
 
 # TODO
