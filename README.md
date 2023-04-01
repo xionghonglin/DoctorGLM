@@ -19,7 +19,7 @@ https://github.com/Toyhom/Chinese-medical-dialogue-data
 直接使用Doctor_GLM/chat.ipynb
 
 
-第一次运行会下载chatGLM-6B权重
+第一次运行会下载chatGLM-6B权重, 如果已有chatGLM-6B权重可以将data_utils.py里的路径修改为自己的权重目录
 ## 结果示例
 <p align="center">
   <img src="imgs/3_ret.png" width=1300px/>
