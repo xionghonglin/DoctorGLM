@@ -20,7 +20,8 @@ https://github.com/Toyhom/Chinese-medical-dialogue-data
 
 
 第一次运行会下载chatGLM-6B权重
-## 对话示例
+## 结果示例
+结果在./results目录下，两份json文件分别为由ChatGLM, DoctorGLM得到的结果
 
 # TODO
 - 降低显存使用
