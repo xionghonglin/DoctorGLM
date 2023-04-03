@@ -1,0 +1,434 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<script src="http://www.google.com/jsapi" type="text/javascript"></script>
+<script type="text/javascript">google.load("jquery", "1.3.2");</script>
+
+<style type="text/css">
+body {
+    font-family: "Titillium Web", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 300;
+    font-size: 17px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 980px;
+}
+h1 {
+    font-weight:300;
+    line-height: 1.15em;
+}
+
+h2 {
+    font-size: 1.75em;
+}
+a:link,a:visited {
+    color: #B6486F;
+    text-decoration: none;
+}
+a:hover {
+    color: #208799;
+}
+h1, h2, h3 {
+    text-align: center;
+}
+h1 {
+    font-size: 40px;
+    font-weight: 500;
+}
+h2 {
+    font-weight: 400;
+    margin: 16px 0px 4px 0px;
+}
+.paper-title {
+    padding: 16px 0px 16px 0px;
+}
+section {
+    margin: 32px 0px 32px 0px;
+    text-align: justify;
+    clear: both;
+}
+.col-5 {
+     width: 20%;
+     float: left;
+}
+.col-4 {
+     width: 25%;
+     float: left;
+}
+.col-3 {
+     width: 33%;
+     float: left;
+}
+.col-2 {
+     width: 50%;
+     float: left;
+}
+.col-1 {
+     width: 100%;
+     float: left;
+}
+.row, .author-row, .affil-row {
+     overflow: auto;
+}
+.author-row, .affil-row {
+    font-size: 26px;
+}
+.row {
+    margin: 16px 0px 16px 0px;
+}
+.authors {
+    font-size: 26px;
+}
+.affil-row {
+    margin-top: 16px;
+}
+.teaser {
+    max-width: 100%;
+}
+.text-center {
+    text-align: center;  
+}
+.screenshot {
+    width: 256px;
+    border: 1px solid #ddd;
+}
+.screenshot-el {
+    margin-bottom: 16px;
+}
+hr {
+    height: 1px;
+    border: 0; 
+    border-top: 1px solid #ddd;
+    margin: 0;
+}
+.material-icons {
+    vertical-align: -6px;
+}
+p {
+    line-height: 1.25em;
+}
+.caption {
+    font-size: 16px;
+    /*font-style: italic;*/
+    color: #666;
+    text-align: center;
+    margin-top: 4px;
+    margin-bottom: 10px;
+}
+video {
+    display: block;
+    margin: auto;
+}
+figure {
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#bibtex pre {
+    font-size: 14px;
+    background-color: #eee;
+    padding: 16px;
+}
+.blue {
+    color: #2c82c9;
+    font-weight: bold;
+}
+.orange {
+    color: #d35400;
+    font-weight: bold;
+}
+.flex-row {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.paper-btn {
+  position: relative;
+  text-align: center;
+
+  display: inline-block;
+  margin: 8px;
+  padding: 8px 8px;
+
+  border-width: 0;
+  outline: none;
+  border-radius: 2px;
+  
+  background-color: #B6486F;
+  color: white !important;
+  font-size: 20px;
+  width: 100px;
+  font-weight: 600;
+}
+.paper-btn-parent {
+    display: flex;
+    justify-content: center;
+    margin: 16px 0px;
+}
+.paper-btn:hover {
+    opacity: 0.85;
+}
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+.venue {
+    /*color: #B6486F;*/
+    font-size: 30px;
+
+}
+
+</style>
+
+<!-- End : Google Analytics Code -->
+<script type="text/javascript" src="../js/hidebib.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,600,400italic,600italic,300,300italic' rel='stylesheet' type='text/css'>
+    <head>
+        <title>ChatDoctor: A Medical Chat Model Fine-tuned on LLaMA Model using Medical Domain Knowledge</title>
+        <meta property="og:description" content="ChatDoctor: A Medical Chat Model Fine-tuned on LLaMA Model using Medical Domain Knowledge"/>
+        <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:creator" content="@ArashVahdat">
+        <meta name="twitter:title" content="ChatDoctor: A Medical Chat Model Fine-tuned on LLaMA Model using Medical Domain Knowledge">
+        <meta name="twitter:description" content="ChatDoctor: A Medical Chat Model Fine-tuned on LLaMA Model using Medical Domain Knowledge">
+        <meta name="twitter:image" content="">
+    </head>
+
+ <body>
+<div class="container">
+    <div class="paper-title">
+      <h1>DoctorGLM: Fine-tuning your Chinese Doctor is not a Herculean Task</h1>
+    </div>
+
+    <div id="authors">
+    	<center>
+        <div class="author-row">
+            <div class="col-4 text-center"><a href="">Honglin Xiong</a><sup>1*</sup></div>
+            <div class="col-4 text-center"><a href="">Sheng Wang</a><sup>1,2,3*</sup></div>
+            <div class="col-4 text-center"><a href="">Yitao Zhu</a><sup>1*</sup></div>
+            <div class="col-4 text-center"><a href="">Zihao Zhao</a><sup>1*</sup></div>
+            <div class="col-4 text-center"><a href="">Yuxiao Liu</a><sup>1</sup></div>
+            <div class="col-4 text-center"><a href="">Linlin Huang</a><sup>4</sup></div>
+            <div class="col-4 text-center"><a href="">Qian Wang</a><sup>1,3</sup></div>
+            <div class="col-4 text-center"><a href="">Dinggang Sheng</a><sup>1,3</sup></div>
+        </div>
+
+        <center>
+            <table align=center width=800px>
+            <tr>
+                <tr align=center width=800px>
+                <center>
+                <div class="col-2 text-center">
+                    <span style="font-size:20px"><sup>1</sup> ShanghaiTech University, Shanghai, China</span>
+                </div>
+                <div class="col-2 text-center">
+                    <span style="font-size:20px"><sup>2</sup>Shanghai Jiao Tong University, Shanghai, China</span>
+                </div>
+                </center>
+                </tr>
+
+                <tr align=center width=800px>
+                <center>
+                <div class="col-2 text-center">
+                    <span style="font-size:20px"><sup>3</sup>United Imaging Intelligence, Shanghai, China</span>
+                </div>
+                <div class="col-2 text-center">
+                    <span style="font-size:20px"><sup>4</sup>Huashan Hospital, Fudan University, Shanghai, China</span>
+                </div>
+                </center>
+                </tr>
+            </tr>
+            </table>
+        </center>
+
+        </center>
+        <br>
+        <center><img width="100%" src="./imgs/overall_pipeline.png" style="margin-top: 20px; margin-bottom: 3px;"></center>
+        <div class="affil-row">
+            <div class="venue text-center"><b></b></div>
+        </div>
+        <br>
+        <div style="clear: both">
+            <div class="paper-btn-parent">
+            <a class="paper-btn" href="https://arxiv.org/">
+                <span class="material-icons"> description </span> 
+                 Paper
+            </a>
+            <a class="paper-btn" href="https://github.com/xionghonglin/DoctorGLM">
+                <span class="material-icons"> code </span> 
+                 Code
+            </a>
+        </div></div>
+    </div>
+
+
+
+
+    <section id="news">
+        <h2>News</h2>
+        <hr>
+        <div class="row">
+            <!-- <div><span class="material-icons"> event </span> [Dec 2021] Paper presented at NeurIPS 2021.</div> 
+            <div><span class="material-icons"> event </span> [Feb 2022] Our <a href="https://github.com/NVlabs/denoising-diffusion-gan">code</a> has been released.</div>-->
+            <div><span class="material-icons"> event </span> [Apr 2023] Our code, model weight and dataset are available!</div>
+        </div>
+    </section>
+
+    <section id="abstract"/>
+        <h2>Abstract</h2>
+        <hr>
+        <div class="flex-row">
+            <p>
+                The recent progress of large language models (LLMs), including ChatGPT and GPT-4, in comprehending and responding to human instructions has been remarkable. Nevertheless, these models typically perform better in English and have not been explicitly trained for the medical domain, resulting in suboptimal precision in diagnoses, drug recommendations, and other medical advice. Additionally, training and deploying a dialogue model is still believed to be impossible for hospitals, hindering the promotion of LLMs.  
+To tackle these challenges, we have collected databases of medical dialogues in Chinese with ChatGPT's help and adopted several techniques to train an easy-deploy LLM. Remarkably, we were able to fine-tune the ChatGLM-6B on <b>a single A100 80G in 13 hours</b>, which means having a healthcare-purpose LLM can be very <b>affordable</b>.</p>
+        </div>
+    </section>
+
+
+    <section id="intro"/>
+        <h2>Introduction</h2>
+        <hr>
+        <div class="flex-row">
+
+        </div>
+
+        <div class="flex-row">
+            <p>
+                Large Language Models (LLMs) are highly advanced artificial intelligence systems that have undergone extensive training on vast amounts of text data. By utilizing deep learning techniques, these models are able to generate responses that resemble human-like speech, making them incredibly useful in a variety of tasks, such as language translation, question answering, and text generation. OpenAI's GPT series, among other LLMs, has exhibited remarkable results, and has the potential to revolutionize various industries, including marketing, education, and customer service. LLMs are highly sought after for their ability to process and understand large amounts of data, which makes them well-suited to solve complex problems.
+            </p>
+            <p>
+                Despite their remarkable performance in natural language processing, large language models like ChatGPT and GPT-4 have not been designed specifically for the medical domain. As a result, using LLMs for medical purposes may lead to suboptimal precision in diagnoses, drug recommendations, and other medical advice, potentially causing harm to patients.Another limitation of large language models like ChatGPT and GPT-4 is that they are typically trained in English, which restricts their ability to comprehend and respond to other languages. This can create a barrier for individuals who do not speak English as their first language and limit the accessibility of medical advice to a wider audience. 
+                In order to overcome these limitations and better integrate LLMs into the lives of most ordinary people,  it's crucial to develop medical-tailored LLMs that can be trained in multiple languages. This will not only improve the accuracy of medical advice provided by these models but also make it more accessible to a wider audience.
+            </p>
+            <p>
+                In order to improve the precision and accuracy of medical advice provided by language models in the medical domain, a database of medical dialogues in Chinese has been compiled. This database contains information from a large number of patients, including their symptoms, recommended medications, and the necessary medical tests. The database has been created to provide language models with extensive medical knowledge and to enable them to generate more accurate and personalized responses to medical queries. By incorporating this knowledge, the hope is to improve the ability of language models to diagnose illnesses and provide better recommendations to patients, ultimately improving the quality of healthcare.
+            </p>
+            <p>
+                To optimize our medical language model for both Chinese and English languages and, more importantly, explore a feasible pipeline of customized medical LLMs, we fine-tuned it based on ChatGLM, a pre-trained language model with 6 billion parameters. This model is unique in that it is bilingual, offering proficiency in both English and Chinese. Furthermore, the GLM model has a unique scaling property that allows for INT4 quantization enabling effective inference on a single RTX 3060 (12G). This scaling property is a major breakthrough in the field of healthcare language modeling, as it allows for more efficient and cost-effective computation on affordable GPUs, making it easier for hospitals to deploy their medical dialogue models based on their in-house data.
+                Also, we use low-rank adaptation that facilitates fine-tuning on an A100 80G GPU. This allows for faster inference times, making it easier for researchers and developers to utilize large-scale language models for a variety of applications.
+            </p>
+            <p>
+                At present, the general public often assumes that large language models (LLMs) are monopolized by technology giants due to the substantial computational costs associated with ChatGPT. However, in this paper, we demonstrate that a specialized Chinese dialogue language model focused on the medical domain can be trained for less than 100 USD. We accomplish this by utilizing parameter-efficient tuning and quantization techniques, enabling the development of an LLM-based system that can be customized for specific tasks. The main contributions of this paper are summarized below:
+            </p>
+            <ol>
+                <li>
+                    We present the first attempt at training a non-English healthcare LLM.
+                </li>
+                <li>
+                    We develop a comprehensive pipeline for training dialogue models, applicable across different languages and adaptable to any specific clinical department. The source code is made available on GitHub.
+                </li>
+                <li>
+                    We demonstrate that the costs of training and deploying a personalized LLM are affordable, thus encouraging hospitals to train their own LLMs based on in-house data with ease.
+                </li>
+            </ol>
+        </div>
+    </section>
+
+
+    <section id="advantages"/>
+        <h2>Dataset with ChatGPT's Help</h2>
+        <hr>
+        <div class="flex-row">
+              <p>
+                It is worth noting that there exists a lot of high-quality datasets released in English. To utilize the available resources, we have translated  ChatDoctor dataset to enhance the Chinese language proficiency of the DoctorGLM.
+              </p>
+              <p>
+                The medical-targeted LLM requires professional training data, which asks high demands for English-Chinese translation. ChatGPT is capable of professional clinical text translation, but this would incur an overhead of tens of thousands of dollars for a large-scale dataset, which is unacceptable to most researchers. Here, we take a simple and low-cost approach to large-scale translation by leveraging the capabilities of ChatGPT.
+              </p>
+              <p>
+                Translation of the dataset is generally in two steps as shown in the figure below. X={x<sub>1</sub>, x<sub>2</sub>, ..., x<sub>N</sub>} is initially selected from the ChatDoctor dataset, where x<sub>n</sub> is the raw English text, and corresponding high-quality translation Y={y<sub>1</sub>, y<sub>2</sub>, ..., y<sub>N</sub>} is obtained through ChatGPT API. Then, a BART-based pre-trained model (Available at: <a href="https://huggingface.co/zhaozh/medical_chat-en-zh">https://huggingface.co/zhaozh/medical_chat-en-zh</a>) is fine-tuned solely on paired X and Y without any additional datasets. In this way, the language model can distill the expert-level knowledge from ChatGPT and the refined small model can act as an acceptable alternative to LLMs. We have translated ChatDoctor to use in our training.
+              </p>
+              <p>
+                To develop conversational models of high quality on a limited academic budget, ChatDoctor utilized a strategy where each message from the disease database was entered as an individual prompt into the GPT3.5-turbo model to generate instruction data automatically. The prompts provided to the ChatGPT API contained the gold standard of diseases, symptoms, and drugs, resulting in a dataset that preserves the conversational fluency of ChatGPT while also achieving higher diagnostic accuracy than ChatGPT alone.
+              </p>
+              <section id="teaser-image1">
+                </p><figure style="margin-top: 20px; margin-bottom: 20px;">
+                    <center>
+                    <img width="40%" src="./imgs/MachineTranslation.png" style="margin-bottom: 20px;">
+                    </center>
+                    <p class="caption">
+                        The implementation of large-scale translation. A tiny and high-quality dataset is built through ChatGPT. The collected dataset serves as a fine-tuning set for a pre-trained language model, enabling it to perform specialized machine translation.
+                    </p><p class="caption">
+                </p>
+    </section>
+        </div>
+
+    </section>
+
+    <section id="novelties"/>
+        <h2>Training of DoctorGLM</h2>
+        <hr>
+        <div class="flex-row">
+            <p>
+            We utilized the ChatGLM-6B model in developing our DoctorGLM. This open bilingual language model is based on the General Language Model (GLM) framework and has 6.2 billion parameters. ChatGLM-6B is optimized for Chinese QA and dialogue, and its technology is similar to ChatGPT. The model was trained on approximately 1 trillion tokens of Chinese and English corpus, with additional supervised fine-tuning, feedback bootstrap, and reinforcement learning using human feedback. Despite having only 6.2 billion parameters, ChatGLM-6B generates answers that are aligned with human preference. Furthermore, we use low-rank adaptation (LoRA) to finetune ChatGLM with only 7 million trainable parameters. 
+            </p>
+            <p>
+            The fine-tuning process using all <i>Chinese medical dialogue</i> dataset was conducted using an A100 GPU for a duration of 8 hours. The hyper-parameters employed in the training process were as follows: the batch size of 4, a learning rate of 2e-5 with lion optimizer, a total of 1 epochs, a maximum sequence length of 512 tokens, a maximum target length of 100 tokens. with no warmup and weight decay. The low-rank adaption is applied to $q,v$ and rank is set to 8 with alpha set to 16.
+            </p>
+        </div>
+
+    </section>
+
+    <section id="advantages"/>
+        <h2>Technical Limitations</h2>
+        <hr>
+        <div class="flex-row">
+            <p>
+                This work is in a very early stage and contains numerous mistakes, making it unsuitable for any commercial or clinical use. One of the reasons we have published our work is to invite the broader community to help improve this healthcare-focused language model, with the aim of making it more accessible, affordable, and convenient for a larger audience. Below are some critical technical issues we encountered during this project:
+            </p>
+            <ol>
+                <li>
+                    DoctorGLM experiences a loss in capability during logistic training, and it occasionally repeats itself. We suspect that fine-tuning typically incurs a higher alignment cost compared to reinforcement learning with human feedback (RLHF).
+                </li>
+                <li>
+                    Generating a response takes approximately 15 to 50 seconds, depending on token length, which is significantly slower than interacting with ChatGPT via the web API. This delay is partly due to the chatbot's typing indicator.
+                </li>
+                <li>
+                    We are currently facing difficulties in quantizing this model. While ChatGLM runs satisfactorily on INT-4 (using about 6G), the trained LoRA of DoctorGLM appears to have some issues. As a result, we are currently unable to deploy our model on more affordable GPUs, such as the RTX 3060 and RTX 2080.
+                </li>
+            </ol>
+        </div>
+    </section>
+
+
+    <!-- <section id="results">
+        <h2>Discussion and conclusion</h2>
+        <hr>
+        <div class="flex-row">
+        </p>ChatDoctor obtained by fine-tuning large language models on medical domain knowledge has a wide range of potential applications, but due to the unique characteristics of the medical domain, large language errors in diagnosis and medical advice can have serious consequences. And large language models often generate many incorrect statements on the knowledge they do not know. In future work, it will be important to limit large language models to generate only results that they are very sure of. In addition, the model performance is highly correlated with the training data, so in the future, we will further improve the performance of the model by collecting real doctor-patient conversations as training data.</div>
+    <section id="teaser-image1">
+            </p><figure style="margin-top: 20px; margin-bottom: 20px;">
+                <img width="100%" src="./fig/chat_example3.png" style="margin-bottom: 20px;">
+                <p class="caption">
+                   An example of a medical advice consultation with ChatDoctor.
+                </p><p class="caption">
+            </p>
+    </section>
+
+
+    </section> -->
+    
+
+
+    <section id="bibtex">
+        <h2>Citation</h2>
+        <hr>
+        <pre><code>@article{li2023chatdoctor,
+  title={ChatDoctor: A Medical Chat Model Fine-tuned on LLaMA Model using Medical Domain Knowledge},
+  author={Li, Yunxiang and Li, Zihan and Zhang, Kai and Dan, Ruilong and Zhang, You},
+  journal={arxiv},
+  year={2023}
+}
+        </code></pre>
+    </section>
+</div>
+</body>
+</html>
