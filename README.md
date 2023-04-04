@@ -48,4 +48,11 @@ https://github.com/Toyhom/Chinese-medical-dialogue-data
 </p>
 我们随机跑了100个结果，在 ./results目录下，两份json文件分别为由ChatGLM, DoctorGLM得到的结果，目前存在大量复读机。
 
+## 引用
+```
+@article{xiong2023doctorglm,
+      title={DoctorGLM: Fine-tuning your Chinese Doctor is not a Herculean Task}, 
+      author={Honglin Xiong and Sheng Wang and Yitao Zhu and Zihao Zhao and Yuxiao Liu and Qian Wang and Dinggang Shen},
+}
+```
 
