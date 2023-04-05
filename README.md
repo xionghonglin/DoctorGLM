@@ -33,15 +33,24 @@ https://github.com/Toyhom/Chinese-medical-dialogue-data
 - torch >= 1.12.0 (icetk依赖cpu版torch, 建议先安装icetk后安装gpu版torch)
 - finetune代码来自 https://github.com/ssbuild/chatglm_finetuning
 ## 使用
-直接使用Doctor_GLM/chat.ipynb
+对于fp16模型，直接使用Doctor_GLM/chat.ipynb
 
-## 即将到来的更新 <img src="https://img.shields.io/badge/Version-0.0.2--alpha-brightgreen">
-- training iter影响的对比实验，选一个更好的fp16模型
-- INT8，INT4的模型（已经有INT4模型，性能下降非常严重，将尝试INT8）
-
-## 即将到来的更新 <img src="https://img.shields.io/badge/Version-0.0.3--alpha-brightgreen">
-- LoRA weight的影响的对比实验
-- 多轮对话数据集训练的新模型
+量化的模型我们打了个包，使用方便，但是效果目前来看很成问题：INT4需要大约6G显存，INT8需要大约8G显存。
+``` python
+from load_quantization import load_int
+tokenizer, model = load_int('DoctorGLM-6B-INT8-6merge-int8.pt',8)
+response, history = model.chat(tokenizer,
+                               "我爷爷高血压可以喝咖啡吗",
+                               history=[],
+                               max_length=2048)
+print(response)
+```
+## 即将到来的更新 
+- [ ] training iter影响的对比实验，选一个更好的fp16模型 <img src="https://img.shields.io/badge/Version-0.0.2--alpha-brightgreen">
+- [x] INT8，INT4的模型（已经有INT4模型，性能下降非常严重，将尝试INT8）<img src="https://img.shields.io/badge/Version-0.0.2--alpha-brightgreen">
+- [ ] LoRA weight的影响的对比实验 <img src="https://img.shields.io/badge/Version-0.0.3--alpha-brightgreen">
+- [ ] 多轮对话数据集训练的新模型 <img src="https://img.shields.io/badge/Version-0.0.3--alpha-brightgreen">
+- [ ] Huggingface
 
 第一次运行会下载chatGLM-6B权重, 如果已有chatGLM-6B权重可以将data_utils.py里的路径修改为自己的权重目录
 ## 结果示例
@@ -51,6 +60,8 @@ https://github.com/Toyhom/Chinese-medical-dialogue-data
 </p>
 我们随机跑了100个结果，在 ./results目录下，两份json文件分别为由ChatGLM, DoctorGLM得到的结果，目前存在大量复读机。
 
+## 开发者群
+![](imgs/group_qrcode.png)
 ## 引用
 ```
 @article{xiong2023doctorglm,
