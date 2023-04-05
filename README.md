@@ -61,7 +61,12 @@ print(response)
 我们随机跑了100个结果，在 ./results目录下，两份json文件分别为由ChatGLM, DoctorGLM得到的结果，目前存在大量复读机。
 
 ## 开发者群
-![](imgs/group_qrcode.png)
+
+<p align="left">
+  <img src="imgs/group_qrcode.png" width=200px/>
+</p>
+
+
 ## 引用
 ```
 @article{xiong2023doctorglm,
