@@ -192,13 +192,13 @@ figure {
 <script type="text/javascript" src="../js/hidebib.js"></script>
     <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,600,400italic,600italic,300,300italic' rel='stylesheet' type='text/css'>
     <head>
-        <title>ChatDoctor: A Medical Chat Model Fine-tuned on LLaMA Model using Medical Domain Knowledge</title>
-        <meta property="og:description" content="ChatDoctor: A Medical Chat Model Fine-tuned on LLaMA Model using Medical Domain Knowledge"/>
+        <title>DoctorGLM: Fine-tuning your Chinese Doctor is not a Herculean Task</title>
+        <meta property="og:description" content="DoctorGLM: Fine-tuning your Chinese Doctor is not a Herculean Task"/>
         <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
         <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:creator" content="@ArashVahdat">
-        <meta name="twitter:title" content="ChatDoctor: A Medical Chat Model Fine-tuned on LLaMA Model using Medical Domain Knowledge">
-        <meta name="twitter:description" content="ChatDoctor: A Medical Chat Model Fine-tuned on LLaMA Model using Medical Domain Knowledge">
+        <meta name="twitter:title" content="DoctorGLM: Fine-tuning your Chinese Doctor is not a Herculean Task">
+        <meta name="twitter:description" content="DoctorGLM: Fine-tuning your Chinese Doctor is not a Herculean Task">
         <meta name="twitter:image" content="">
     </head>
 
@@ -288,12 +288,45 @@ figure {
         <div class="flex-row">
             <p>
                 The recent progress of large language models (LLMs), including ChatGPT and GPT-4, in comprehending and responding to human instructions has been remarkable. Nevertheless, these models typically perform better in English and have not been explicitly trained for the medical domain, resulting in suboptimal precision in diagnoses, drug recommendations, and other medical advice. Additionally, training and deploying a dialogue model is still believed to be impossible for hospitals, hindering the promotion of LLMs.  
-To tackle these challenges, we have collected databases of medical dialogues in Chinese with ChatGPT's help and adopted several techniques to train an easy-deploy LLM. Remarkably, we were able to fine-tune the ChatGLM-6B on <b>a single A100 80G in 13 hours</b>, which means having a healthcare-purpose LLM can be very <b>affordable</b>.</p>
+                To tackle these challenges, we have collected databases of medical dialogues in Chinese with ChatGPT's help and adopted several techniques to train an easy-deploy LLM. Remarkably, we were able to fine-tune the ChatGLM-6B on <b>a single A100 80G in 13 hours</b>, which means having a healthcare-purpose LLM can be very <b>affordable</b>.
+                DoctorGLM is currently an early-stage engineering attempt and contain various mistakes. We are sharing it with the broader community to invite feedback and suggestions to improve its healthcare-focused capabilities
         </div>
     </section>
 
 
-    <section id="intro"/>
+    <section id="results"/>
+        <h2>Results</h2>
+        <hr>
+        <div class="flex-row">
+            <section id="teaser-image1">
+            </p><figure style="margin-top: 20px; margin-bottom: 20px;">
+                <center>
+                <img width="90%" src="./imgs/example1.png" style="margin-bottom: 20px;">
+                </center>
+                
+            </p>
+            <section id="teaser-image1">
+            </p><figure style="margin-top: 20px; margin-bottom: 20px;">
+                <center>
+                <img width="90%" src="./imgs/example2.png" style="margin-bottom: 20px;">
+                </center>
+                
+            </p>
+            <section id="teaser-image1">
+            </p><figure style="margin-top: 20px; margin-bottom: 20px;">
+                <center>
+                <img width="90%" src="./imgs/example34.png" style="margin-bottom: 20px;">
+                </center>
+                <p class="caption">
+                    Doctor's comments are marked in blue. Factual errors are marked in red. Improper diagnosis are marked in green.
+                </p><p class="caption">
+            </p>
+</section>
+        </div>
+    </section>
+
+
+    <!-- <section id="intro"/>
         <h2>Introduction</h2>
         <hr>
         <div class="flex-row">
@@ -375,25 +408,29 @@ To tackle these challenges, we have collected databases of medical dialogues in 
             </p>
         </div>
 
-    </section>
+    </section> -->
 
     <section id="advantages"/>
         <h2>Technical Limitations</h2>
         <hr>
         <div class="flex-row">
-            <p>
-                This work is in a very early stage and contains numerous mistakes, making it unsuitable for any commercial or clinical use. One of the reasons we have published our work is to invite the broader community to help improve this healthcare-focused language model, with the aim of making it more accessible, affordable, and convenient for a larger audience. Below are some critical technical issues we encountered during this project:
-            </p>
+            <b>This work is in a very early stage and contains numerous mistakes, making it unsuitable for any commercial or clinical use.</b> One of the reasons we have published our work is to invite the broader community to help improve this healthcare-focused language model, with the aim of making it more accessible, affordable, and convenient for a larger audience. Below are some critical technical issues we encountered during this project:
             <ol>
-                <li>
-                    DoctorGLM experiences a loss in capability during logistic training, and it occasionally repeats itself. We suspect that fine-tuning typically incurs a higher alignment cost compared to reinforcement learning with human feedback (RLHF).
-                </li>
-                <li>
-                    Generating a response takes approximately 15 to 50 seconds, depending on token length, which is significantly slower than interacting with ChatGPT via the web API. This delay is partly due to the chatbot's typing indicator.
-                </li>
-                <li>
-                    We are currently facing difficulties in quantizing this model. While ChatGLM runs satisfactorily on INT-4 (using about 6G), the trained LoRA of DoctorGLM appears to have some issues. As a result, we are currently unable to deploy our model on more affordable GPUs, such as the RTX 3060 and RTX 2080.
-                </li>
+                <li>DoctorGLM experiences a loss in capability during logistic training, and it occasionally repeats itself. We suspect that fine-tuning typically incurs a higher alignment cost compared to reinforcement learning with human feedback (RLHF).</li>
+                <li>Generating a response takes approximately 15 to 50 seconds, depending on token length, which is significantly slower than interacting with ChatGPT via the web API. This delay is partly due to the chatbot's typing indicator.</li>
+                <li>We are currently facing difficulties in quantizing this model. While ChatGLM runs satisfactorily on INT-4 (using about 6G), the trained LoRA of DoctorGLM appears to have some issues. As a result, we are currently unable to deploy our model on more affordable GPUs, such as the RTX 3060 and RTX 2080.</li>
+                <li>We have noticed that the model's performance declines with prolonged training, but we currently lack a strategy for determining when to stop training. It appears that cross-entropy is an overly rigid constraint when fine-tuning LLMs.</li>
             </ol>
         </div>
+    </section>
+
+    <section id="bibtex">
+        <h2>Citation</h2>
+        <hr>
+        <pre><code>@article{xiong2023doctorglm,
+        title={DoctorGLM: Fine-tuning your Chinese Doctor is not a Herculean Task}, 
+        author={Honglin Xiong, Sheng Wang, Yitao Zhu, Zihao Zhao, 
+            Yuxiao Liu, Linlin Huang, Qian Wang, Dinggang Shen},
+      }
+        </code></pre>
     </section>
