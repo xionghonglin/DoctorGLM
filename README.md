@@ -45,6 +45,15 @@ response, history = model.chat(tokenizer,
                                max_length=2048)
 print(response)
 ```
+## 模型在线部署
+
+为了方便部署并随时调整模型生成回答时的参数，我么提供了基于 `Gradio` 库的部署代码，路径为 `Doctor_GLM/gradio.ipynb`。运行之后会，访问本机的7860或者代码声明的其他端口即可以运行Demo，模型在生成回答时的参数可以由用户自由调控。若想让部署的模型可以被局域网之外的其他用户访问，需要将sharing设置为 `True`（默认为`False`）。部署之后运行效果如下所示：
+
+<p align="center">
+  <img src="imgs/gradio.gif" width=1300px/>
+  <br/>
+</p>
+
 ## 即将到来的更新 
 - [ ] training iter影响的对比实验，选一个更好的fp16模型 <img src="https://img.shields.io/badge/Version-0.0.2--alpha-brightgreen">
 - [x] INT8，INT4的模型（已经有INT4模型，性能下降非常严重，将尝试INT8）<img src="https://img.shields.io/badge/Version-0.0.2--alpha-brightgreen">
