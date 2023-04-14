@@ -47,7 +47,7 @@ print(response)
 ```
 其中INT 4的量化模型链接为：https://pan.baidu.com/s/1nHQ1EQ2OBuWCyBZKBnBHYw?pwd=x6l4 
 INT 8的量化模型链接为：https://pan.baidu.com/s/1v2hWl1dPnh8xoJzxtpbugw?pwd=y4hu
-量化方法均为分层的限行量化。
+量化方法均为分层的线性量化。
 目前量化模型的性能**仍有较大问题**，后期我们会对量化方法和模型进行更新
 ## 模型在线部署
 
