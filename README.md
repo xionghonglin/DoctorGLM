@@ -1,7 +1,7 @@
 <p align="center">
   <img src="imgs/logo.png" width=400px/>
   <br/>
-  <img src="https://img.shields.io/badge/Version-0.0.1--alpha-brightgreen">
+  <img src="https://img.shields.io/badge/Version-0.0.2--alpha-brightgreen">
   <br/>
   <a href="https://xionghonglin.github.io/DoctorGLM/">[Project Page]</a>
 </p>
@@ -11,6 +11,7 @@
 
 # DoctorGLM
 基于 ChatGLM-6B的中文问诊模型
+
 ## 训练数据
 | Dataset    | Department                | Language | Q&A  | Chat | Number | Syn. | Size  | Weight |
 |------------|--------------------------|----------|------|------|--------|------|-------|-------|
@@ -45,10 +46,11 @@ response, history = model.chat(tokenizer,
                                max_length=2048)
 print(response)
 ```
-其中INT 4的量化模型链接为：https://pan.baidu.com/s/1nHQ1EQ2OBuWCyBZKBnBHYw?pwd=x6l4 
-INT 8的量化模型链接为：https://pan.baidu.com/s/1v2hWl1dPnh8xoJzxtpbugw?pwd=y4hu
+模型下载链接：
+[INT4](https://pan.baidu.com/s/1nHQ1EQ2OBuWCyBZKBnBHYw?pwd=x6l4) [INT8](https://pan.baidu.com/s/1v2hWl1dPnh8xoJzxtpbugw?pwd=y4hu)
 量化方法均为分层的线性量化。
 目前量化模型的性能**仍有较大问题**，后期我们会对量化方法和模型进行更新
+
 ## 模型在线部署
 
 为了方便部署并随时调整模型生成回答时的参数，我们提供了基于 `Gradio` 库的部署代码，路径为 `Doctor_GLM/gradio.ipynb`。运行之后，访问本机的7860或者代码声明的其他端口即可以运行Demo，模型在生成回答时的参数可以由用户自由调控。若想让部署的模型可以被局域网之外的其他用户访问，需要将sharing设置为 `True`（默认为`False`）。部署之后运行效果如下所示：
@@ -58,11 +60,13 @@ INT 8的量化模型链接为：https://pan.baidu.com/s/1v2hWl1dPnh8xoJzxtpbugw?
   <br/>
 </p>
 
+## 最近更新
+- <img src="https://img.shields.io/badge/Version-0.0.1--alpha-brightgreen"> (2023.4.3) 初版的权重，来自LoRA SFT 1 epcoh
+- <img src="https://img.shields.io/badge/Version-0.0.2--alpha-brightgreen"> (2023.4.13) LoRA-INT4/8量化权重，以及我们实验发现LoRA一直会丢失对话能力，放弃该方式，转向P-Tuning
+
 ## 即将到来的更新 
-- [ ] training iter影响的对比实验，选一个更好的fp16模型 <img src="https://img.shields.io/badge/Version-0.0.2--alpha-brightgreen">
-- [x] INT8，INT4的模型（已经有INT4模型，性能下降非常严重，将尝试INT8）<img src="https://img.shields.io/badge/Version-0.0.2--alpha-brightgreen">
-- [ ] LoRA weight的影响的对比实验 <img src="https://img.shields.io/badge/Version-0.0.3--alpha-brightgreen">
-- [ ] 多轮对话数据集训练的新模型 <img src="https://img.shields.io/badge/Version-0.0.3--alpha-brightgreen">
+- [ ] <img src="https://img.shields.io/badge/Version-0.0.3--alpha-brightgreen"> (2023.4.17) P-Tuning 多轮对话数据集训练的新权重和arxiv，预实验表明对话能力相比LoRA模型提升很多
+- [ ] <img src="https://img.shields.io/badge/Version-0.0.4--alpha-brightgreen"> 对话中加入参考文献
 - [ ] Huggingface
 
 第一次运行会下载chatGLM-6B权重, 如果已有chatGLM-6B权重可以将data_utils.py里的路径修改为自己的权重目录
