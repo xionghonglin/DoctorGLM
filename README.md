@@ -36,8 +36,8 @@ https://github.com/Toyhom/Chinese-medical-dialogue-data
 - torch >= 1.12.0 (icetk依赖cpu版torch, 建议先安装icetk后安装gpu版torch)
 - lora的finetune代码来自 https://github.com/ssbuild/chatglm_finetuning
 
-对于fp16模型，直接使用Doctor_GLM/chat_lora.ipynb，由于官方更新了chatglm的权重，我们将老权重放在了   
-https://pan.baidu.com/s/1vuoBbOQVPJPAcurEfVRn7A?pwd=ahwc   
+对于fp16模型，直接使用Doctor_GLM/chat_lora.ipynb，由于官方更新了chatglm的权重，我们将老权重放在了
+[old_weight](https://pan.baidu.com/s/1vuoBbOQVPJPAcurEfVRn7A?pwd=ahwc)
 可以下载后解压到old_pretrain_model目录
 
 量化的模型我们打了个包，使用方便，但是效果目前来看很成问题：INT4需要大约6G显存，INT8需要大约8G显存
@@ -54,10 +54,11 @@ print(response)
 [INT4](https://pan.baidu.com/s/1nHQ1EQ2OBuWCyBZKBnBHYw?pwd=x6l4) [INT8](https://pan.baidu.com/s/1v2hWl1dPnh8xoJzxtpbugw?pwd=y4hu)
 量化方法均为分层的线性量化。
 目前量化模型的性能**仍有较大问题**，后期我们会对量化方法和模型进行更新
+
 ### p-tuningv2
 我们实现p-tuningv2时基于官方新版本权重，可以在hugging face上下载，并将我们使用的目录pretrain_model更换成你自己的权重目录。
-p-tuningv2的权重在  
-https://pan.baidu.com/s/1Yf56egVGwI0XN2iOLcEGSQ?pwd=r4p0  
+p-tuningv2的权重在
+[ptuning_weight](https://pan.baidu.com/s/1Yf56egVGwI0XN2iOLcEGSQ?pwd=r4p0 )
 下载后解压到ckpt/ptuningv2目录下, 然后直接使用Doctor_GLM/chat_ptuning_v2.ipynb
 
 
