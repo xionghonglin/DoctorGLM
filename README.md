@@ -35,9 +35,9 @@ https://github.com/Toyhom/Chinese-medical-dialogue-data
 - torch >= 1.12.0 (icetk依赖cpu版torch, 建议先安装icetk后安装gpu版torch)
 - finetune代码来自 https://github.com/ssbuild/chatglm_finetuning
 
-对于fp16模型，直接使用Doctor_GLM/chat.ipynb，由于官方更新了chatglm的权重，我们将老权重放在了
-链接：https://pan.baidu.com/s/1vuoBbOQVPJPAcurEfVRn7A?pwd=ahwc 
-提取码：ahwc 
+对于fp16模型，直接使用Doctor_GLM/chat.ipynb，由于官方更新了chatglm的权重，我们将老权重放在了  
+链接：https://pan.baidu.com/s/1vuoBbOQVPJPAcurEfVRn7A?pwd=ahwc   
+提取码：ahwc   
 可以下载后解压到old_pretrain_model目录
 
 量化的模型我们打了个包，使用方便，但是效果目前来看很成问题：INT4需要大约6G显存，INT8需要大约8G显存
