@@ -56,7 +56,7 @@ print(response)
 目前量化模型的性能**仍有较大问题**，后期我们会对量化方法和模型进行更新
 
 ### p-tuningv2
-我们实现p-tuningv2时基于官方新版本权重，可以在hugging face上下载，并将我们使用的目录pretrain_model更换成你自己的权重目录  
+我们实现p-tuningv2时基于官方新版本权重，可以在hugging face上下载，也可以从我们的链接下载 [pretrain_model](https://pan.baidu.com/s/1WaG-NQeXVR7BNZs_zlUFmQ?pwd=h88g)   
 p-tuningv2的权重在
 [ptuning_weight](https://pan.baidu.com/s/1Yf56egVGwI0XN2iOLcEGSQ?pwd=r4p0 ) ， 下载后解压到ckpt/ptuningv2目录下, 然后使用Doctor_GLM/chat_ptuning_v2.ipynb
 
