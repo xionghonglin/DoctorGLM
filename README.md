@@ -58,7 +58,7 @@ print(response)
 ### p-tuningv2
 我们实现p-tuningv2时基于官方新版本权重，可以在hugging face上下载，并将我们使用的目录pretrain_model更换成你自己的权重目录  
 p-tuningv2的权重在
-[ptuning_weight](https://pan.baidu.com/s/1Yf56egVGwI0XN2iOLcEGSQ?pwd=r4p0 ) ， 下载后解压到ckpt/ptuningv2目录下, 然后直接使用Doctor_GLM/chat_ptuning_v2.ipynb
+[ptuning_weight](https://pan.baidu.com/s/1Yf56egVGwI0XN2iOLcEGSQ?pwd=r4p0 ) ， 下载后解压到ckpt/ptuningv2目录下, 然后使用Doctor_GLM/chat_ptuning_v2.ipynb
 
 
 
