@@ -40,7 +40,7 @@ https://github.com/Toyhom/Chinese-medical-dialogue-data
 [old_pretrain_model](https://pan.baidu.com/s/1vuoBbOQVPJPAcurEfVRn7A?pwd=ahwc)
 可以下载后解压到old_pretrain_model目录
 
-量化的模型我们打了个包，使用方便，但是效果目前来看很成问题：INT4需要大约6G显存，INT8需要大约8G显存
+量化的模型我们打了个包，使用方便，但是效果目前来看很成问题：INT4需要大约6G显存，INT8需要大约8G显存，在Doctor_GLM/chat_lora_quant.ipynb下使用
 ``` python
 from load_quantization import load_int
 tokenizer, model = load_int('DoctorGLM-6B-INT8-6merge-int8.pt',8)
@@ -58,7 +58,7 @@ print(response)
 ### p-tuningv2
 我们实现p-tuningv2时基于官方新版本权重，可以在hugging face上下载，也可以从我们的链接下载 [pretrain_model](https://pan.baidu.com/s/1WaG-NQeXVR7BNZs_zlUFmQ?pwd=h88g)   
 p-tuningv2的权重在
-[ptuning_weight](https://pan.baidu.com/s/1Yf56egVGwI0XN2iOLcEGSQ?pwd=r4p0 ) ， 下载后解压到ckpt/ptuningv2目录下, 然后使用Doctor_GLM/chat_ptuning_v2.ipynb
+[ptuning_weight](https://pan.baidu.com/s/1Yf56egVGwI0XN2iOLcEGSQ?pwd=r4p0 ) ， 下载后解压到ckpt/ptuningv2目录下, 然后使用Doctor_GLM/chat_ptuning_v2.ipynb，根据需要调整quantization_bit为4或8
 
 
 
