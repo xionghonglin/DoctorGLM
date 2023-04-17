@@ -4,6 +4,7 @@
   <img src="https://img.shields.io/badge/Version-0.0.2--alpha-brightgreen">
   <br/>
   <a href="https://xionghonglin.github.io/DoctorGLM/">[Project Page]</a>
+  <a href="https://arxiv.org/abs/2304.01097">[Arxiv Paper]</a>
 </p>
 
 
@@ -21,7 +22,7 @@
 |            | Internal Medicine        | CN       | ✔    | ×    | 307K   | ×    | 102MB |       |
 |            | Andriatria               | CN       | ✔    | ×    | 113K   | ×    | 44MB  |       |
 |            | Merged                   | CN       | ✔    | ×    | 1.9M   | ×    |       |Doctor_GLM/ckpt|
-| MedDialog  | Multiple                 | CN&EN    | ✔    | ✔    | 3.4M   | ×    | 1.5GB |Coming soon    |
+| MedDialog  | Multiple                 | CN&EN    | ✔    | ✔    | 3.4M   | ×    | 1.5GB |[ptuning_weight](https://pan.baidu.com/s/1Yf56egVGwI0XN2iOLcEGSQ?pwd=r4p0)   |
 | ChatDoctor | Multiple                 | EN       | ✔    | ×    | 5.4K   | ✔    | 2.9MB |Coming soon    |
 | HearlthcareMagic| Multiple            | EN       | ✔    | ×    | 200K   | ×    | 216MB |Coming soon    |
 
@@ -58,7 +59,7 @@ print(response)
 ### p-tuningv2
 我们实现p-tuningv2时基于官方新版本权重，可以在hugging face上下载，也可以从我们的链接下载 [pretrain_model](https://pan.baidu.com/s/1WaG-NQeXVR7BNZs_zlUFmQ?pwd=h88g)   
 p-tuningv2的权重在
-[ptuning_weight](https://pan.baidu.com/s/1Yf56egVGwI0XN2iOLcEGSQ?pwd=r4p0 ) ， 下载后解压到ckpt/ptuningv2目录下, 然后使用Doctor_GLM/chat_ptuning_v2.ipynb，根据需要调整quantization_bit为4或8
+[ptuning_weight](https://pan.baidu.com/s/1Yf56egVGwI0XN2iOLcEGSQ?pwd=r4p0) ， 下载后解压到ckpt/ptuningv2目录下, 然后使用Doctor_GLM/chat_ptuning_v2.ipynb，根据需要调整quantization_bit为4或8
 
 
 
