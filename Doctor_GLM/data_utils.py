@@ -26,9 +26,9 @@ train_info_args = {
     'data_backend': 'record',
     'model_type': 'chatglm',
     # 预训练模型路径 , 从0训练，则置空
-    'model_name_or_path': "/home/leosher/models/DoctorGLM/d2bbc82a2cdd04522ad340bdd464379808676950",
-    'config_name': './config/config.json',
-    'tokenizer_name': "/home/leosher/models/DoctorGLM/d2bbc82a2cdd04522ad340bdd464379808676950",
+    'model_name_or_path': "old_pretrain_model",
+    'config_name': 'old_pretrain_model/config.json',
+    'tokenizer_name': "old_pretrain_model",
 
     'convert_onnx': False, # 转换onnx模型
     'do_train': True,
