@@ -30,7 +30,8 @@
 https://github.com/Toyhom/Chinese-medical-dialogue-data
 
 ## 使用
-- 显存 >= 13G
+### lora
+- 显存 >= 13G （未量化版本）
 - pip install deep_training cpm_kernels icetk transformers>=4.26.1 
 - torch >= 1.12.0 (icetk依赖cpu版torch, 建议先安装icetk后安装gpu版torch)
 - finetune代码来自 https://github.com/ssbuild/chatglm_finetuning
