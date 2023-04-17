@@ -1,7 +1,7 @@
 <p align="center">
   <img src="imgs/logo.png" width=400px/>
   <br/>
-  <img src="https://img.shields.io/badge/Version-0.0.2--alpha-brightgreen">
+  <img src="https://img.shields.io/badge/Version-0.0.3--alpha-brightgreen">
   <br/>
   <a href="https://xionghonglin.github.io/DoctorGLM/">[Project Page]</a>
   <a href="https://arxiv.org/abs/2304.01097">[Arxiv Paper]</a>
@@ -12,6 +12,9 @@
 
 # DoctorGLM
 基于 ChatGLM-6B的中文问诊模型
+
+## 最近更新
+- <img src="https://img.shields.io/badge/Version-0.0.3--alpha-brightgreen">(2023.4.18): P-Tuning & 多轮对话 & 模型可靠性提升
 
 ## 训练数据
 | Dataset    | Department                | Language | Q&A  | Chat | Number | Syn. | Size  | Weight |
@@ -75,11 +78,11 @@ p-tuningv2的权重在
 ## 最近更新
 - <img src="https://img.shields.io/badge/Version-0.0.1--alpha-brightgreen"> (2023.4.3) 初版的权重，来自LoRA SFT 1 epcoh
 - <img src="https://img.shields.io/badge/Version-0.0.2--alpha-brightgreen"> (2023.4.13) LoRA-INT4/8量化权重，以及我们实验发现LoRA一直会丢失对话能力，放弃该方式，转向P-Tuning
+- <img src="https://img.shields.io/badge/Version-0.0.3--alpha-brightgreen"> (2023.4.18) P-Tuning 多轮对话数据集训练的新权重和arxiv
 
 ## 即将到来的更新 
-- [ ] <img src="https://img.shields.io/badge/Version-0.0.3--alpha-brightgreen"> (2023.4.17) P-Tuning 多轮对话数据集训练的新权重和arxiv，预实验表明对话能力相比LoRA模型提升很多
-- [ ] <img src="https://img.shields.io/badge/Version-0.0.4--alpha-brightgreen"> 对话中加入参考文献
-- [ ] Huggingface
+- [ ] <img src="https://img.shields.io/badge/Version-0.0.4--alpha-brightgreen"> (2023.4.21) 对话中加入参考文献，模型上传到huggingface
+
 
 第一次运行会下载chatGLM-6B权重, 如果已有chatGLM-6B权重可以将data_utils.py里的路径修改为自己的权重目录
 ## 结果示例
