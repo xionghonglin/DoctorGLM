@@ -37,7 +37,7 @@ https://github.com/Toyhom/Chinese-medical-dialogue-data
 - lora的finetune代码来自 https://github.com/ssbuild/chatglm_finetuning
 
 对于fp16模型，直接使用Doctor_GLM/chat_lora.ipynb，由于官方更新了chatglm的权重，我们将老权重放在了
-[old_weight](https://pan.baidu.com/s/1vuoBbOQVPJPAcurEfVRn7A?pwd=ahwc)
+[old_pretrain_model](https://pan.baidu.com/s/1vuoBbOQVPJPAcurEfVRn7A?pwd=ahwc)
 可以下载后解压到old_pretrain_model目录
 
 量化的模型我们打了个包，使用方便，但是效果目前来看很成问题：INT4需要大约6G显存，INT8需要大约8G显存
