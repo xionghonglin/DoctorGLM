@@ -36,7 +36,7 @@ https://github.com/Toyhom/Chinese-medical-dialogue-data
 - torch >= 1.12.0 (icetk依赖cpu版torch, 建议先安装icetk后安装gpu版torch)
 - lora的finetune代码来自 https://github.com/ssbuild/chatglm_finetuning
 
-对于fp16模型，直接使用Doctor_GLM/chat_lora.ipynb，由于官方更新了chatglm的权重，我们将老权重放在了
+对于fp16模型，直接使用Doctor_GLM/chat_lora.ipynb，由于官方更新了chatglm的权重，我们将老版权重放在了
 [old_pretrain_model](https://pan.baidu.com/s/1vuoBbOQVPJPAcurEfVRn7A?pwd=ahwc)
 可以下载后解压到old_pretrain_model目录
 
