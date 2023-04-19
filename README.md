@@ -5,6 +5,7 @@
   <br/>
   <a href="https://xionghonglin.github.io/DoctorGLM/">[Project Page]</a>
   <a href="https://arxiv.org/abs/2304.01097">[Arxiv Paper]</a>
+  <a href="https://zhuanlan.zhihu.com/p/622649076">[Latest Blog]</a>
 </p>
 
 
