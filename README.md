@@ -96,7 +96,7 @@ p-tuningv2的权重在
 ## 开发者群
 
 <p align="left">
-  <img src="imgs/group_qrcode.png" width=200px/>
+  <img src="imgs/11682312010_.pic.jpg" width=200px/>
 </p>
 DoctorGLM开发者群，如果你也对基于ChatGLM的应用开发感兴趣，欢迎加入我们的讨论组。
 
