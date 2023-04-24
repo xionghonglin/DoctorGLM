@@ -24,10 +24,10 @@ def load_int(filename: str, q:int=4):
     tokenizer, _, _, _ = dataHelper.load_tokenizer_and_config(
         tokenizer_class_name=ChatGLMTokenizer, config_class_name=ChatGLMConfig)
 
-    config = ChatGLMConfig.from_pretrained('./ckpt')
+    config = ChatGLMConfig.from_pretrained('./ckpt/lora')
     config.initializer_weight = False
 
-    lora_args = LoraArguments.from_pretrained('./ckpt')
+    lora_args = LoraArguments.from_pretrained('./ckpt/lora')
 
     assert lora_args.inference_mode == True
 
