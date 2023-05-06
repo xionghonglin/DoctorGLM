@@ -4,8 +4,9 @@
   <img src="https://img.shields.io/badge/Version-0.0.3--alpha-brightgreen">
   <br/>
   <a href="https://xionghonglin.github.io/DoctorGLM/">[Project Page]</a>
-  <a href="https://arxiv.org/abs/2304.01097">[Arxiv Paper]</a>
-  <a href="https://zhuanlan.zhihu.com/p/622649076">[Latest Blog]</a>
+  <a href="https://arxiv.org/abs/2304.01097">[Arxiv]</a>
+  <a href="https://zhuanlan.zhihu.com/p/622649076">[最新博客]</a>
+  <a href="https://doctorglm.idealab-llms.com">[在线体验]</a>
 </p>
 
 
