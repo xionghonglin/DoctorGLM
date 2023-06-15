@@ -104,8 +104,10 @@ DoctorGLM开发者群，如果你也对基于ChatGLM的应用开发感兴趣，�
 ## 引用
 ```
 @article{xiong2023doctorglm,
-      title={DoctorGLM: Fine-tuning your Chinese Doctor is not a Herculean Task}, 
-      author={Honglin Xiong and Sheng Wang and Yitao Zhu and Zihao Zhao and Yuxiao Liu and Linlin Huang and Qian Wang and Dinggang Shen},
+  title={Doctorglm: Fine-tuning your chinese doctor is not a herculean task},
+  author={Xiong, Honglin and Wang, Sheng and Zhu, Yitao and Zhao, Zihao and Liu, Yuxiao and Wang, Qian and Shen, Dinggang},
+  journal={arXiv preprint arXiv:2304.01097},
+  year={2023}
 }
 ```
 
