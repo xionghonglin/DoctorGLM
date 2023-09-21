@@ -94,12 +94,7 @@ p-tuningv2的权重在
 </p>
 我们随机跑了100个结果，在 ./results目录下，两份json文件分别为由ChatGLM, DoctorGLM得到的结果，目前存在大量复读机。
 
-## 开发者群
 
-<p align="left">
-  <img src="imgs/11682312010_.pic.jpg" width=200px/>
-</p>
-DoctorGLM开发者群，如果你也对基于ChatGLM的应用开发感兴趣，欢迎加入我们的讨论组。
 
 ## 引用
 ```
